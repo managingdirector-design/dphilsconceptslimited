@@ -12,11 +12,14 @@
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-    <!-- Neon accent lines -->
-    <div class="neon-line"></div>
-    <div class="neon-line"></div>
-    <div class="neon-line"></div>
-    <div class="neon-line"></div>
+
+        <!-- SVG Abstract Wave Lines -->
+        <svg class="wave-lines" viewBox="0 0 300 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 0 Q80 100 40 200 Q0 300 80 400 Q160 500 40 600 Q-80 700 80 800 Q240 900 40 1000" stroke="#00fff7" stroke-width="3" fill="none" opacity="0.7"/>
+            <path d="M120 0 Q160 120 120 240 Q80 360 160 480 Q240 600 120 720 Q0 840 160 960" stroke="#a020f0" stroke-width="2" fill="none" opacity="0.5"/>
+        </svg>
+        <div class="neon-streak v"></div>
+        <div class="neon-streak h"></div>
 
     <!-- Dark mode toggle -->
     <div class="dark-mode-toggle">
@@ -29,21 +32,29 @@
         <!-- Left panel (sidebar) -->
         <aside class="sidebar">
             <div class="logo-container">
-                <div class="image-frame">
-                    <img src="images/logo.png" alt="D'Phils Services Logo" class="logo">
+                <div class="logo-holo">
+                    <img src="images/logo.png" alt="D-Phils Concepts Limited Logo">
+                    <div class="company-name">D-PHILS CONCEPTS LIMITED</div>
+                    <div class="holo-rings">
+                        <div class="ring ring1"></div>
+                        <div class="ring ring2"></div>
+                        <div class="ring ring3"></div>
+                    </div>
                 </div>
             </div>
-            
+            <div class="neon-divider"></div>
             <nav class="vertical-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="active"><a href="contact.html">Contact</a></li>
+                    <li><a href="#work">Work</a></li>
                 </ul>
                 <div class="nav-indicator"></div>
             </nav>
-            
+            <div class="slide-counter">4 / 4</div>
+            <div class="create-art">Create Art</div>
             <!-- Mobile hamburger menu -->
             <div class="hamburger-menu">
                 <span></span>
@@ -85,6 +96,24 @@
                             <p>philschu44@gmail.com</p>
                         </div>
                     </div>
+
+                    <div class="social-section fade-on-scroll">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons social-icons-large">
+                            <a href="https://www.facebook.com/profile.php?id=61575549142421&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dphilsconceptsltd?igsh=bzdpcmk2YnRjejlp" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://vm.tiktok.com/ZSHWuVGA7KeHS-d4Ob0/" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="http://www.youtube.com/@D-PhilsConceptsLimited" target="_blank" rel="noopener" aria-label="Subscribe to our YouTube channel">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -94,21 +123,45 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="image-frame">
-                        <img src="images/logo.png" alt="D'Phils Services Logo">
-                    </div>
-                    <p>D'Phils Services</p>
+                    <img src="images/logo.png" alt="D'Phils Services Logo" style="width:50px;height:50px;filter:drop-shadow(0 0 8px var(--color-neon-cyan));">
+                    <p style="color:var(--color-neon-cyan);font-weight:700;letter-spacing:0.08em;">D'Phils Services</p>
                 </div>
                 <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="services.html">Gallery</a>
                 </div>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <div class="social-icons fade-in">
+                    <a href="https://www.facebook.com/profile.php?id=61575549142421&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dphilsconceptsltd?igsh=bzdpcmk2YnRjejlp" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://vm.tiktok.com/ZSHWuVGA7KeHS-d4Ob0/" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="http://www.youtube.com/@D-PhilsConceptsLimited" target="_blank" rel="noopener" aria-label="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
+            <div class="footer-divider"></div>
             <p class="copyright">&copy; 2024 D'Phils Services. All rights reserved.</p>
+            <div class="social-icons social-icons-center fade-in">
+                <a href="https://www.facebook.com/profile.php?id=61575549142421&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/dphilsconceptsltd?igsh=bzdpcmk2YnRjejlp" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://vm.tiktok.com/ZSHWuVGA7KeHS-d4Ob0/" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="http://www.youtube.com/@D-PhilsConceptsLimited" target="_blank" rel="noopener" aria-label="Subscribe to our YouTube channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
