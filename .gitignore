@@ -1,0 +1,30 @@
+# Node modules (if ever using npm/yarn)
+node_modules/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor backups / temp
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# GitHub Codespaces / Cloud IDE temp files
+*.save
+*.tmp
+.gitignore.swp
