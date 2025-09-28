@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - D'Phils Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,12 @@
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
+    <!-- Neon accent lines -->
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+
     <!-- Dark mode toggle -->
     <div class="dark-mode-toggle">
         <i class="fas fa-moon"></i>
@@ -23,7 +29,9 @@
         <!-- Left panel (sidebar) -->
         <aside class="sidebar">
             <div class="logo-container">
-                <img src="images/logo.png" alt="D'Phils Services Logo" class="logo">
+                <div class="image-frame">
+                    <img src="images/logo.png" alt="D'Phils Services Logo" class="logo">
+                </div>
             </div>
             
             <nav class="vertical-nav">
@@ -54,7 +62,9 @@
                         <p class="fade-on-scroll">At D'Phils Services, we believe in delivering high-quality solutions tailored to meet your specific needs. Our team of experts is dedicated to ensuring customer satisfaction through excellent service delivery.</p>
                     </div>
                     <div class="about-image fade-on-scroll">
-                        <img src="images/nysc.jpg" alt="D'Phils Team" class="hover-zoom">
+                        <div class="image-frame">
+                            <img src="images/nysc.jpg" alt="D'Phils Team" class="hover-zoom">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -65,7 +75,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="D'Phils Services Logo">
+                    <div class="image-frame">
+                        <img src="images/logo.png" alt="D'Phils Services Logo">
+                    </div>
                     <p>D'Phils Services</p>
                 </div>
                 <div class="footer-links">
@@ -98,6 +110,6 @@
         <a href="mailto:philschu44@gmail.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Phils Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,12 @@
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
+    <!-- Neon accent lines -->
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+    <div class="neon-line"></div>
+
     <!-- Dark mode toggle -->
     <div class="dark-mode-toggle">
         <i class="fas fa-moon"></i>
@@ -23,7 +29,9 @@
         <!-- Left panel (sidebar) -->
         <aside class="sidebar">
             <div class="logo-container">
-                <img src="images/logo.png" alt="D'Phils Services Logo" class="logo">
+                <div class="image-frame">
+                    <img src="images/logo.png" alt="D'Phils Services Logo" class="logo">
+                </div>
             </div>
             
             <nav class="vertical-nav">
@@ -50,10 +58,12 @@
                 <div class="hero-content">
                     <h1 class="fade-in">Professional Services Reimagined</h1>
                     <p class="slide-in">Your one-stop solution for all professional services in Umuahia and beyond</p>
-                    <a href="services.html" class="cta-button">Explore Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="services.html" class="cta-button button">Explore Now <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="hero-image">
-                    <img src="images/computer_training.jpg" alt="Professional Services" class="hover-zoom">
+                    <div class="image-frame">
+                        <img src="images/computer_training.jpg" alt="Professional Services" class="hover-zoom">
+                    </div>
                 </div>
             </section>
 
@@ -64,12 +74,14 @@
                         <div class="service-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <img src="images/computer_training.jpg" alt="Computer Training Services">
+                        <div class="image-frame">
+                            <img src="images/computer_training.jpg" alt="Computer Training Services">
+                        </div>
                         <h3>Computer Training</h3>
                         <p class="teaser">Professional computer training for all skill levels.</p>
                         <div class="service-details">
                             <p>Comprehensive computer training programs tailored to your needs. Learn essential software, programming, and digital skills.</p>
-                            <a href="https://wa.me/2347066707211" class="whatsapp-button">Send Message</a>
+                            <a href="https://wa.me/2347066707211" class="whatsapp-button button">Send Message</a>
                         </div>
                     </div>
 
@@ -77,12 +89,14 @@
                         <div class="service-icon">
                             <i class="fas fa-drafting-compass"></i>
                         </div>
-                        <img src="images/cad.jpg" alt="CAD Design Services">
+                        <div class="image-frame">
+                            <img src="images/cad.jpg" alt="CAD Design Services">
+                        </div>
                         <h3>CAD Services</h3>
                         <p class="teaser">Professional CAD design and drafting.</p>
                         <div class="service-details">
                             <p>Expert CAD design services for architectural, mechanical, and engineering projects.</p>
-                            <a href="https://wa.me/2347066707211" class="whatsapp-button">Send Message</a>
+                            <a href="https://wa.me/2347066707211" class="whatsapp-button button">Send Message</a>
                         </div>
                     </div>
 
@@ -90,12 +104,14 @@
                         <div class="service-icon">
                             <i class="fas fa-print"></i>
                         </div>
-                        <img src="images/printing.jpg" alt="Printing Services">
+                        <div class="image-frame">
+                            <img src="images/printing.jpg" alt="Printing Services">
+                        </div>
                         <h3>Printing Services</h3>
                         <p class="teaser">High-quality printing solutions.</p>
                         <div class="service-details">
                             <p>Professional printing services for documents, banners, business cards, and more.</p>
-                            <a href="https://wa.me/2347066707211" class="whatsapp-button">Send Message</a>
+                            <a href="https://wa.me/2347066707211" class="whatsapp-button button">Send Message</a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +136,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="D'Phils Services Logo">
+                    <div class="image-frame">
+                        <img src="images/logo.png" alt="D'Phils Services Logo">
+                    </div>
                     <p>D'Phils Services</p>
                 </div>
                 <div class="footer-links">
@@ -153,6 +171,6 @@
         <a href="mailto:philschu44@gmail.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

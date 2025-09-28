@@ -1,11 +1,23 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Show loading animation
+    showLoadingScreen();
+    
     // Initialize all components
     initDarkMode();
     initMobileMenu();
     initServiceCards();
     initScrollEffects();
+    initCustomCursor();
+    initAccordion();
+    initCounters();
+    initStickyNavbar();
     initBackToTop();
+
+    // Hide loading screen after initialization
+    window.addEventListener('load', () => {
+        hideLoadingScreen();
+    });
 });
 
 // Dark mode toggle
@@ -153,6 +165,127 @@ function initBackToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+}
+
+// Loading Screen Functions
+function showLoadingScreen() {
+    const loading = document.createElement('div');
+    loading.className = 'loading-screen';
+    loading.innerHTML = '<div class="loading-spinner"></div>';
+    document.body.appendChild(loading);
+}
+
+function hideLoadingScreen() {
+    const loading = document.querySelector('.loading-screen');
+    if (loading) {
+        loading.style.opacity = '0';
+        setTimeout(() => loading.remove(), 500);
+    }
+}
+
+// Custom Cursor
+function initCustomCursor() {
+    const cursor = document.createElement('div');
+    cursor.className = 'cursor-dot';
+    document.body.appendChild(cursor);
+    
+    let cursorInterval;
+    
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        
+        clearInterval(cursorInterval);
+        cursorInterval = setInterval(() => {
+            const trail = cursor.cloneNode();
+            trail.className = 'cursor-trail';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            document.body.appendChild(trail);
+            setTimeout(() => trail.remove(), 500);
+        }, 50);
+    });
+    
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        clearInterval(cursorInterval);
+    });
+    
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+    });
+}
+
+// Sticky Navbar
+function initStickyNavbar() {
+    const sidebar = document.querySelector('.sidebar');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            sidebar.classList.add('sticky');
+        } else {
+            sidebar.classList.remove('sticky');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
+
+// Accordion
+function initAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            accordionItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+// Counters
+function initCounters() {
+    const counters = document.querySelectorAll('.counter-number');
+    const options = {
+        threshold: 1,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                
+                const updateCount = () => {
+                    const increment = target / 100;
+                    
+                    if (count < target) {
+                        count += increment;
+                        counter.textContent = Math.ceil(count);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                counter.classList.add('visible');
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    }, options);
+    
+    counters.forEach(counter => observer.observe(counter));
 }
 
 // Smooth scroll for navigation links
